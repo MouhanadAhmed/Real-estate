@@ -1,0 +1,449 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: teal;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  /* min-height: 100vh; */
+  /* width: 70%; */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+h6{
+  margin-bottom: 2rem;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+.swiper-button-next::after, .swiper-rtl .swiper-button-prev::after {
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 400 !important; 
+  content: "\f060" !important;
+  /* color: red; */
+  transition: all 0.2s ease 0s;
+}
+.swiper-button-next{
+  /* color: red !important;
+  background-color: white !important; */
+}
+SwiperSlide img:hover .swiper-button-next{
+  display: none;
+  /* transition: all 0.2s ease 0s; */
+  
+  }
+
+  div{
+      transition: all 0.2s ease 0s;
+    }
+
+h1{
+  font-size: 3.75rem !important;
+  font-weight: 700;
+}
+
+
+
+.icon::after {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  /* transition: transform 50s ease-in-out !important; */
+}
+.swiper-button-next::after, .swiper-rtl .swiper-button-prev::after {
+  font: var(--fa-font-solid) !important;
+  content: "\f061" !important;
+  /* color: red;
+  padding: 10px; */
+  /* border: 1px solid white; */
+  /* margin-right: 0px; */
+  /* margin-left: -100%; */
+  /* transition: all 50s ease-in-out; */
+/* margin-right: 5rem !important; */
+}
+.swiper-button-next ,.swiper-button-prev{
+  color: white !important;
+  font-weight: 400 !important;
+  font-size: 1.5rem;
+  /* border: 1px solid white; */
+  /* padding: 20px; */
+  margin-left: 30px;
+  margin-right: 40px;
+  opacity: 0 !important;
+  transition: transform 1s , opacity 1s;
+  /* transition: all 50s ; */
+  /* background-color: white !important; */
+  /* vertical-align: middle; */
+  /* text-align:justify */
+  /* transition: display 50s ease-in-out !important; */
+  
+}
+.swiper-button-next{
+  /* padding:   10px ; */
+  /* text-align: center; */
+  /* transition: all 50s ease-in-out; */
+  transition: transform 1s , opacity 1s;
+
+  
+}
+.swiper-button-next:hover ,.swiper-button-prev:hover{
+  background-color: #ff5a3c;
+  border: none !important;
+  
+  /* transition: all 50s ease-in-out !important; */
+  
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  font: var(--fa-font-solid) !important;
+  content: "\f060" !important;
+  /* color: red; */
+  /* transition: all 50s ease-in-out !important; */
+  
+}
+
+.swiper:hover  .swiper-button-next  {
+  transform: translateX(50%);
+    opacity: 1 !important;
+    border: 1px solid white;
+    padding: 20px;
+  /* transition: all 50s ease-in-out; */
+  
+  }
+  .swiper:hover  .swiper-button-prev {
+    transform: translateX(-50%);
+      opacity: 1 !important;
+      border: 1px solid white;
+      padding: 20px;
+    /* transition: all 50s ease-in-out; */
+    
+    }
+
+    .btn-wrapper{
+      animation-name: fadeInUp;
+    }
+  .swiper{
+      /* margin: 0; */
+      padding: 0 ;
+      width: 100vw;
+    }
+
+  SwiperSlide img:hover .swiper-button-next{
+      display: none;
+      /* transition: all 0.2s ease 0s; */
+      
+      }
+  .swiper-slide-active figcaption h6{
+    transform: translateY(0%);
+    transition: all 0.7s ease-in-out;
+    opacity: 1;
+  }
+  .swiper-slide-prev figcaption h6 ,.swiper-slide-next figcaption h6{
+    transform: translateY(100%);
+    transition: all 0.7s ease-in-out;
+    opacity: 0;
+  }
+  .swiper-slide-active figcaption h1{
+    transform: translateY(0%);
+    transition: all 0.7s ease-in-out;
+    transition-delay: 0.7s;
+    opacity: 1;
+
+  }
+  .swiper-slide-prev figcaption h1 ,.swiper-slide-next figcaption h1{
+    transform: translateY(100%);
+    transition: all 0.7s ease-in-out;
+    transition-delay: 0.7s;
+    opacity: 0;
+  }
+  .swiper-slide-active figcaption p{
+    transform: translateY(0%);
+    transition: all 0.7s ease-in-out;
+    transition-delay: 1.4s;
+    opacity: 1;
+
+  }
+  .swiper-slide-prev figcaption p ,.swiper-slide-next figcaption p{
+    transform: translateY(100%);
+    transition: all 0.7s ease-in-out;
+    transition-delay: 1.4s;
+    opacity: 0;
+  }
+  .swiper-slide-active figcaption button{
+    transform: translateY(0%);
+    transition: transform 0.7s ease-in-out , opacity 0.7s ease-in-out;
+    /* transition: opacity 0.7s ease-in-out; */
+    transition-delay:2.1s;
+    opacity: 1;
+
+  }
+  .swiper-slide-prev figcaption button ,.swiper-slide-next figcaption button{
+    transform: translateY(100%);
+    transition: all 0.7s ease-in-out;
+    /* transition: opacity 0.7s ease-in-out; */
+    /* transition-delay: 3s; */
+    opacity: 0;
+  }
+      div{
+  
+          transition: all 0.2s ease 0s;
+  
+          
+        }
+  
+  h1{
+      font-size: 3.75rem !important;
+      font-weight: 700;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  a.active{
+    background-color: #ff5a3c;
+    color: white;
+  }
+  a{
+    /* color: white !important; */
+    text-decoration: none;
+
+  }
+  @media screen and (min-width: 100px) and (max-width: 349px){
+    .mySwiper{
+      padding-top: 0rem !important;
+    }
+    .mySwiper figure figCaption:first-child{
+      margin-top: 0px !important;
+      padding: 0% !important;
+    }
+    .mySwiper figure figCaption{
+      /* max-height: 200px !important; */
+      padding: 0rem !important;
+      padding-top: 3rem !important;
+    }
+    .mySwiper figure figCaption h6{
+      font-size: 0.3em;
+      margin-bottom: 2px;
+      padding-top: 0rem !important;
+
+    }
+    .mySwiper figure figCaption h1{
+      font-size: 1em !important;
+      font-weight: 400 !important;
+      margin-bottom: 1px !important;
+    }
+    .mySwiper figure figCaption p{
+      font-size: 0.3rem !important;
+      font-weight: 200;
+      margin-bottom: 2px !important;
+      width: 100% !important;
+      margin: auto;
+      padding:  0 !important;
+    }
+    .mySwiper figure figCaption button{
+      padding:  0.125rem 0.5rem !important;
+      font-size: 0.8rem !important;
+      border-radius: 5px !important;
+      /* line-height: 0.5rem; */
+    }
+    }
+  @media screen and (min-width: 350px) and (max-width: 430px){
+    .mySwiper{
+      padding-top: 0rem !important;
+    }
+    .mySwiper figure figCaption:first-child{
+      margin-top: 0px !important;
+      padding: 0% !important;
+    }
+    .mySwiper figure figCaption{
+      /* max-height: 200px !important; */
+      padding: 0rem !important;
+      padding-top: 4rem !important;
+    }
+    .mySwiper figure figCaption h6{
+      font-size: 0.5em;
+      margin-bottom: 2px;
+      padding-top: 0rem !important;
+
+    }
+    .mySwiper figure figCaption h1{
+      font-size: 1em !important;
+      font-weight: 700 !important;
+      margin-bottom: 2px !important;
+    }
+    .mySwiper figure figCaption p{
+      font-size: 0.5rem !important;
+      font-weight: 200;
+      margin-bottom: 2px !important;
+      width: 100% !important;
+      margin: auto;
+      padding:  0 !important;
+    }
+    .mySwiper figure figCaption button{
+      padding:  0.125rem 0.5rem !important;
+      font-size: 0.8rem !important;
+      border-radius: 5px !important;
+      /* line-height: 0.5rem; */
+    }
+    }
+    @media screen and (min-width: 431px) and (max-width: 476px){
+      .mySwiper{
+        padding-top: 0rem !important;
+      }
+      .mySwiper figure figCaption:first-child{
+        margin-top: 0px !important;
+        padding: 0% !important;
+      }
+      .mySwiper figure figCaption{
+        /* max-height: 200px !important; */
+        padding: 0rem !important;
+        padding-top: 4rem !important;
+      }
+      .mySwiper figure figCaption h6{
+        font-size: 0.5em;
+        margin-bottom: 2px;
+        padding-top: 0rem !important;
+  
+      }
+      .mySwiper figure figCaption h1{
+        font-size: 1em !important;
+        font-weight: 700 !important;
+        margin-bottom: 2px !important;
+      }
+      .mySwiper figure figCaption p{
+        font-size: 0.5rem !important;
+        font-weight: 200;
+        margin-bottom: 2px !important;
+        width: 100% !important;
+        margin: auto;
+        padding:  0 !important;
+      }
+      .mySwiper figure figCaption button{
+        padding:  0.125rem 0.5rem !important;
+        font-size: 0.8rem !important;
+        border-radius: 5px !important;
+        /* line-height: 0.5rem; */
+      }
+      }
+    
+@media screen and (min-width: 477px) and (max-width:768px) {
+  .mySwiper{
+    padding-top: 0rem;
+  }
+  .mySwiper figure figCaption:first-child{
+    margin-top: 0px !important;
+    padding: 0% !important;
+    padding-top: 1rem !important;
+  }
+  .mySwiper figure figCaption{
+    /* max-height: 200px !important; */
+    padding: 0rem !important;
+    padding-top: 3.5rem !important;
+  }
+  .mySwiper figure figCaption h6{
+    font-size: 0.6rem;
+    margin-bottom: 10px;
+  }
+  .mySwiper figure figCaption h1{
+    font-size: 1.3em !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+  }
+  .mySwiper figure figCaption p{
+    font-size: 0.6rem !important;
+    font-weight: 200;
+    margin-bottom: 15px !important;
+    width: 50% !important;
+    margin: auto;
+    padding:  0 !important;
+  }
+  .mySwiper figure figCaption button{
+    padding:  0.125rem 0.5rem !important;
+    font-size: 0.8rem !important;
+    /* border-radius: 5px !important; */
+    /* line-height: 0.5rem; */
+  }
+    a.nav-link{
+      color: gray !important;
+      padding-left: 1rem !important;
+      text-transform: uppercase;
+    }
+}

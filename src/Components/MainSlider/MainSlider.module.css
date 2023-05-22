@@ -1,0 +1,21 @@
+
+
+    .theme:hover{
+        background-position: left bottom;
+        color: black;
+        border: 1px solid black;
+    }
+
+
+.theme{
+        background-color: #ff5a3c ;
+        background: linear-gradient(to right, white 50%, #ff5a3c 50%);
+        color: white ;
+        text-decoration: none ;
+        border-radius:unset;
+        border:unset;
+        padding: 1rem 2rem;
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+    }
